@@ -1,5 +1,5 @@
 class ListController < ApplicationController
-  before_action :set_list, only: [:edit :update]
+  before_action :set_list, only: %i(edit update)
 
   def new
     @list = List.new
