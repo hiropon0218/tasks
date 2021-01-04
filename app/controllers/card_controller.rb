@@ -14,6 +14,11 @@ class CardController < ApplicationController
     end
   end
 
+  def show
+    @card = Card.find_by(id:params[:list_id])
+  end
+
+
 
   private
 
