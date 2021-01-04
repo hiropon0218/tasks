@@ -22,7 +22,7 @@ class CardController < ApplicationController
   end
 
   def update
-    if @card.update_attributes(card_paramas)
+    if @card.update_attributes(card_params)
       redirect_to :root
     else
       render action: :edit
