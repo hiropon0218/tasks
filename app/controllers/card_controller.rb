@@ -1,4 +1,5 @@
 class CardController < ApplicationController
+  before_action :set_card, only: %i(show edit update)
 
   def new
     @card = Card.new
@@ -15,15 +16,12 @@ class CardController < ApplicationController
   end
 
   def show
-    @card = Card.find_by(id:params[:id])
   end
 
   def edit
-    @card = Card.find_by(id:params[:id])
   end
 
   def update
-    @card = Card.find_by(id:params[:id])
     if @card.update_attributes(card_paramas)
       redirect_to :root
     else
@@ -37,4 +35,7 @@ class CardController < ApplicationController
       params.require(:card).permit(:title, :memo, :list_id)
     end
 
+    def set_card
+      @card = Card.find_by(id:params[:id])
+    end
 end
