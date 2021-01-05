@@ -19,7 +19,6 @@ class CardController < ApplicationController
   end
 
   def edit
-    @lists = List.where(user:current_user)
   end
 
   def update
@@ -48,7 +47,5 @@ class CardController < ApplicationController
       params.require(:card).permit(:title, :memo, :list_id)
     end
 
-    # def set_lists
-      # @lists = List.all
-    # end
+
 end
