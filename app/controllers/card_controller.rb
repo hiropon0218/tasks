@@ -7,7 +7,7 @@ class CardController < ApplicationController
   end
 
   def create
-    @card = Card.new(card_params)
+    @card = Card.new(card_params_create)
     if @card.save
       redirect_to :root
     else
@@ -23,7 +23,7 @@ class CardController < ApplicationController
   end
 
   def update
-    if @card.update_attributes(card_params)
+    if @card.update_attributes(card_params_update)
       redirect_to :root
     else
       render action: :edit
@@ -36,12 +36,19 @@ class CardController < ApplicationController
   end
 
   private
-
-    def card_params
-      params.require(:card).permit(:title, :memo, :list_id)
-    end
-
     def set_card
       @card = Card.find_by(id:params[:id])
     end
+
+    def card_params_create
+      params.require(:card).permit(:title, :memo).merge(list_id: params[:list_id])
+    end
+
+    def card_params_update
+      params.require(:card).permit(:title, :memo, :list_id)
+    end
+
+    # def set_lists
+      # @lists = List.all
+    # end
 end
