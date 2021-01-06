@@ -13,16 +13,11 @@ RSpec.describe List, type: :model do
     end
 
     context 'list作成が失敗する時' do
+      # 文字数制限に関してはviewファイルで設けているのでテストコードは記述しない
       it 'titleが存在しないとき' do
         @list.title = nil
         @list.valid?
         expect(@list.errors.full_messages).to include("Title translation missing: ja.activerecord.errors.models.list.attributes.title.too_short")
-      end
-
-      it 'titleが31字以上のとき' do
-        @list.title = "aaaaaaaaaabbbbbbbbbbccccccccccd"
-        @list.valid?
-        expect(@list.errors.full_messages).to include("Title translation missing: ja.activerecord.errors.models.list.attributes.title.too_long")
       end
     end
   end
