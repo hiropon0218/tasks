@@ -17,7 +17,7 @@ RSpec.describe List, type: :model do
       it 'titleが存在しないとき' do
         @list.title = nil
         @list.valid?
-        expect(@list.errors.full_messages).to include("Title translation missing: ja.activerecord.errors.models.list.attributes.title.too_short")
+        expect(@list.errors.full_messages).to include("Titleは1文字以上で入力してください")
       end
     end
   end

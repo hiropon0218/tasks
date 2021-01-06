@@ -16,25 +16,25 @@ RSpec.describe User, type: :model do
       it '名前が存在しないとき' do
         @user.name = nil
         @user.valid?
-        expect(@user.errors.full_messages).to include("お名前 translation missing: ja.activerecord.errors.models.user.attributes.name.blank")
+        expect(@user.errors.full_messages).to include("お名前を入力してください")
       end
 
       it '名前が21文字以上のとき' do
         @user.name = "12345678910abcdefghijk"
         @user.valid?
-        expect(@user.errors.full_messages).to include("お名前 translation missing: ja.activerecord.errors.models.user.attributes.name.too_long")
+        expect(@user.errors.full_messages).to include("お名前は20文字以内で入力してください")
       end
 
       it 'メールアドレスが存在しないとき' do
         @user.email = nil
         @user.valid?
-        expect(@user.errors.full_messages).to include("メールアドレス translation missing: ja.activerecord.errors.models.user.attributes.email.blank")
+        expect(@user.errors.full_messages).to include("メールアドレスを入力してください")
       end
 
       it 'メールアドレスに＠マークが存在しないとき' do
         @user.email = "123abc"
         @user.valid?
-        expect(@user.errors.full_messages).to include("メールアドレス translation missing: ja.activerecord.errors.models.user.attributes.email.invalid")
+        expect(@user.errors.full_messages).to include("メールアドレスは不正な値です")
       end
 
       it 'メールアドレスが重複しているとき' do
@@ -48,13 +48,13 @@ RSpec.describe User, type: :model do
       it 'パスワードが存在しないとき' do
         @user.password = nil
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワード translation missing: ja.activerecord.errors.models.user.attributes.password.blank")
+        expect(@user.errors.full_messages).to include("パスワードを入力してください")
       end
     
       it 'パスワードが5文字以下の時' do
         @user.password = "12345"
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワード translation missing: ja.activerecord.errors.models.user.attributes.password.too_short")
+        expect(@user.errors.full_messages).to include("パスワードは6文字以上で入力してください")
       end
 
       it 'パスワードが存在してもパスワード確認が存在しない時' do

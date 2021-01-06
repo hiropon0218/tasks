@@ -17,7 +17,7 @@ RSpec.describe Card, type: :model do
       it 'titleが存在しないとき' do
         @card.title = nil
         @card.valid?
-        expect(@card.errors.full_messages).to include("Title translation missing: ja.activerecord.errors.models.card.attributes.title.too_short")
+        expect(@card.errors.full_messages).to include("Titleは1文字以上で入力してください")
       end
     end
   end
