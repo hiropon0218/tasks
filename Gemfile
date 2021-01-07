@@ -60,3 +60,4 @@ gem 'pry-rails'
 gem 'pg',group: :production
 gem 'acts_as_list'
 gem 'rails-i18n'
+gem 'rename'
