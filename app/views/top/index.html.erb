@@ -11,7 +11,8 @@
         </div>
 
        <div class="cardWrapper">
-         <% list.cards.each do |card| %>
+       <%# orderメソッドでは降順表示できなかったのでreverse_eachで実装した %>
+         <% list.cards.reverse_each do |card| %>
           <%= link_to list_card_path(list, card), class:"cardDetail_link" do %>
             <div class="card">
               <h3 class="card_title"><%= card.title %></h3>
