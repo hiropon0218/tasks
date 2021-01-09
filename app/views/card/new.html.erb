@@ -6,13 +6,13 @@
         <p class="text-danger">タイトルは1～30文字以内で入力してください</p>
       <% end %>
       <div class="cardnewForm_title">
-        <%= f.label :title %>
+        <%= f.label :タイトル %>
         <%= f.text_field :title, autofocus: true, class: "form-control", placeholder: "カード名は30文字以内で作成してください" ,maxlength:"30"%>
       </div>
       <%= f.label :日付を選択, class: 'lavel' %>
     <%= f.date_field :date, class: 'date-select' %>
       <div class="cardnewForm_memo">
-        <%= f.label :memo %>
+        <%= f.label :メモ %>
         <%= f.text_area :memo, autofocus: true, class: "form-control", placeholder: "詳細",maxlength:"1000" %>
       <div class="text-center"><%= f.submit "作成する", class: "submitBtn" %></div>
       </div>
