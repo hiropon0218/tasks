@@ -4,7 +4,7 @@
       <% if @list.errors.any? %>
         <p class="text-danger">タイトルは30文字以内で入力してください</p>
       <% end %>
-      <%= f.label :title %>
+      <%= f.label :タイトル %>
     <%= f.text_field :title, autofocus: true, class: "form-control listName", placeholder: "リスト名は30文字以内で作成してください", maxlength:"30"%>
       <div class="text-center"><%= f.submit "作成", class: "submitBtn" %></div>
     <% end %>

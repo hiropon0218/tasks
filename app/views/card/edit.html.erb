@@ -5,15 +5,15 @@
         <p class="text-danger">タイトルは1～30文字以内で入力してください</p>
       <% end %>
       <div class="cardeditForm_title">
-        <%= f.label :title %>
+        <%= f.label :タイトル %>
         <%= f.text_field :title, class: "form-control", placeholder: "カード名は30文字以内で作成してください",maxlength:"30" %>
       </div>
       <div class="cardeitForm_date">
-        <%= f.label :date%>
+        <%= f.label :日付を選択%>
         <%= f.date_field :date, class: 'date-select' %>
       </div>
       <div class="cardeditForm_memo">
-        <%= f.label :memo %>
+        <%= f.label :メモ %>
         <%= f.text_area :memo, class: "form-control", placeholder: "詳細",maxlength:"1000" %>
       </div>
 
