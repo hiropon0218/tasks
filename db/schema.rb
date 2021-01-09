@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2021_01_03_120607) do
     t.string "title", limit: 255, null: false
     t.text "memo", limit: 1000
     t.integer "list_id", null: false
+    t.date "date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["list_id"], name: "index_cards_on_list_id"

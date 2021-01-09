@@ -40,11 +40,11 @@ class CardController < ApplicationController
     end
 
     def card_params_create
-      params.require(:card).permit(:title, :memo).merge(list_id: params[:list_id])
+      params.require(:card).permit(:title, :memo, :date).merge(list_id: params[:list_id])
     end
 
     def card_params_update
-      params.require(:card).permit(:title, :memo, :list_id)
+      params.require(:card).permit(:title, :memo, :date, :list_id)
     end
 
 
