@@ -1,7 +1,5 @@
 class CardController < ApplicationController
-  before_action :set_card, only: %i(index show edit update destroy)
-  def index
-  end 
+  before_action :set_card, only: %i(show edit update destroy)
 
   def new
     @card = Card.new
@@ -9,7 +7,7 @@ class CardController < ApplicationController
   end
 
   def create
-    @card = Card.new(card_params_create)
+    @card = Card.new(card_params)
     if @card.save
       redirect_to :root
     else
@@ -24,7 +22,7 @@ class CardController < ApplicationController
   end
 
   def update
-    if @card.update_attributes(card_params_update)
+    if @card.update_attributes(card_params)
       redirect_to :root
     else
       render action: :edit
@@ -41,11 +39,7 @@ class CardController < ApplicationController
       @card = Card.find_by(id:params[:id])
     end
 
-    def card_params_create
-      params.require(:card).permit(:title, :memo, :date).merge(list_id: params[:list_id])
-    end
-
-    def card_params_update
+    def card_params
       params.require(:card).permit(:title, :memo, :date, :list_id)
     end
 
