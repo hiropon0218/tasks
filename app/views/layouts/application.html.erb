@@ -10,9 +10,9 @@
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <!-- jQuery、jQuery UIの読み込み -->
-   <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+   <%# <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script> %>
      <%# <script src = " https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js " > </script> %>
 
      
@@ -38,7 +38,7 @@
  
   </body>
 
- <!-- Sortableの実装 -->
+ <%# <!-- Sortableの実装 -->
     <script>
    $(function() {
     $('div.card').each(function(i){
@@ -83,7 +83,7 @@
            );
          } 
       });
- </script>
+ </script> %>
  
  <%# <script>
     $(function() {
