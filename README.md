@@ -2,7 +2,7 @@
 
 ## 「積ん読」は読書スケジュール管理アプリです。
 - カンバンボード形式でリストとカードでスケジュール管理ができます。
-[積ん読](https://tsundoku32509.herokuapp.com/users/sign_in)
+- [積ん読](https://tsundoku32509.herokuapp.com/users/sign_in)
 
 # テーブル設計
 
