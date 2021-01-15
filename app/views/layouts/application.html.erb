@@ -12,11 +12,7 @@
     <!-- jQuery、jQuery UIの読み込み -->
    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-     <%# <script src = " https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js " > </script> %>
-
-     
-
+   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
   </head>
 
@@ -35,65 +31,60 @@
      <% end %>
 
     <%= yield %>
- 
+
   </body>
 
+</html>
+ 
  <!-- Sortableの実装 -->
-    <%# <script>
-   $(function() {
-    $('div.card').each(function(i){
-    $(this).attr('id','card' + (i+1));
-    });
-    $(".cardWrapper").sortable();
-    $(".cardWrapper").disableSelection();
-    $(".cardWrapper").sortable({
-        update: function(ev, ui) {
-            var updateArray =  $(".cardWrapper").sortable("toArray").join(",");
-            $.cookie("sortable", updateArray, {expires: 30});    
-        }        
-    });
-    if($.cookie("sortable")) {
-        var cookieValue = $.cookie("sortable").split(",").reverse();
-         $.each(
-            cookieValue,
-            function(index, value) {$('#'+value).prependTo(".cardWrapper");}
-           );
-         } 
-      });
- </script> %>
-  
-  <script>
+   <%# listのsortable %>
+   <script>
    $(function() {
     $('div.list').each(function(i){
     $(this).attr('id','list' + (i+1));
     });
-    $(".listWrapper").sortable();
-    $(".listWrapper").disableSelection();
     $(".listWrapper").sortable({
         update: function(ev, ui) {
-            var updateArray =  $(".listWrapper").sortable("toArray").join(",");
-            $.cookie("sortable", updateArray, {expires: 30});    
-        }        
+            var updateArray1 =  $(".listWrapper").sortable("toArray");
+            console.log(updateArray1);
+            $.cookie("sortable1", updateArray1, {expires: 1});    
+        }       
     });
-    if($.cookie("sortable")) {
-        var cookieValue = $.cookie("sortable").split(",").reverse();
+    if($.cookie("sortable1")) {
+        var cookieValue = $.cookie("sortable1").split(",").reverse();
          $.each(
             cookieValue,
             function(index, value) {$('#'+value).prependTo(".listWrapper");}
            );
          } 
       });
- </script>
- 
- <%# <script>
-    $(function() {
-    $(".cardWrapper").sortable();
-    $(".cardWrapper").disableSelection();
-    // $(".cardWrapper").sortable();
-      });
-     </script> %>
 
+    // // cardのsortable(未完成の為コメントアウトしています)
+    // $(function() {
+    // $('div.card').each(function(i){
+    // $(this).attr('id','card' + (i+1));
+    // });
+    // $(".cardWrapper").sortable({
+    //     update: function(ev, ui) {
+    //         var updateArray2 =  $(".cardWrapper").sortable("toArray");
+    //         console.log(updateArray2);
+    //         $.cookie("sortable2", updateArray2, {expires: 1});
+    //         allCookies = document.cookie;
+    //         console.log(allCookies)
+    //           }                 
+    // });
+    // if($.cookie("sortable2")){
+    //      var cookieValue = $.cookie("sortable2").split(",").reverse();
+    //      allCookies = document.cookie;
+    //         console.log(allCookies)
+    //      $.each(
+    //          cookieValue,
+    //           function(index, value) {$('#'+value).prependTo(".cardWrapper");}
+    //          );
+    //        } 
+    //      });
 
+   
+</script> 
 
-</html>
- 
+  
