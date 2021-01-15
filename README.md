@@ -1,24 +1,39 @@
-# README
+# 積ん読
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 「積ん読」は読書スケジュール管理アプリです。
+-カンバンボード形式でリストとカードでスケジュール管理ができます。
+-url 
 
-Things you may want to cover:
+# テーブル設計
 
-* Ruby version
+## usersテーブル
+| Column             | Type     | Option              |
+| ------------------ | -------- | ------------------- |
+| name               | string   | null: false         |
+| email              | string   | null: false, unique |
+| encrypted_password | string   | null: false         |
 
-* System dependencies
+### Association
+- has_many :lists
+- has_many :cards
 
-* Configuration
+## listsテーブル
+| Column           | Type       | Option                         |
+| ---------------- | ---------- | ------------------------------ |
+| title            | string     | null: false                    |
+| user             | references | null: false, foreign_key: true |
 
-* Database creation
+### Association
+- belongs_to :user
+- has_many :cards
 
-* Database initialization
+## cardsテーブル
+| Column           | Type       | Option                         |
+| ---------------- | ---------- | ------------------------------ |
+| title            | string     | null: false                    |
+| memo             | text       |                                |
+| date             | date       |                                |
+| list             | references | null: false, foreign_key: true |
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+- belongs_to :list
