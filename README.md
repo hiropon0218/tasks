@@ -28,6 +28,10 @@ url: https://tsundoku32509.herokuapp.com/users/sign_in
 ### 不要なリストの削除
 ![image](https://gyazo.com/38f0a555fe763e5d9773b20db23feeb6/raw)
 
+### ドラッグアンドドロップを用いたリストの移動
+画面更新後も位置は保持されます
+![image](https://gyazo.com/719cf5c7ba1c0c5e57648ebb8c6b20a9/raw)
+
 
 
 # テーブル設計
