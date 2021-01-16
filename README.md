@@ -8,7 +8,18 @@ url: https://tsundoku32509.herokuapp.com/users/sign_in
 - メールアドレス: guest@aaa
 - パスワード: 123abc
 
+## 使い方
+### 新規ユーザー登録後は自動的に以下の3つのボードが自動生成されます。
+このボードは任意で消したりタイトルの変更も可能です。
 ![image](https://user-images.githubusercontent.com/74945462/104792374-8379fc80-57e1-11eb-8387-ffbbd11c08f4.png)
+
+### 本を追加
+ボードの中の”本を追加”をクリックすると以下の画面に遷移し、内容を入力します。
+タイトル、予定の日付、メモを記入します。(タイトルのみ必須)
+![image](https://user-images.githubusercontent.com/74945462/104792768-f59f1100-57e2-11eb-9202-a22c144441fa.png)
+
+
+
 
 
 
