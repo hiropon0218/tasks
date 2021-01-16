@@ -23,7 +23,7 @@ url: https://tsundoku32509.herokuapp.com/users/sign_in
 
 ### リスト間での本の移動
 読書状況に応じて本のカードを各リストに移動します。
-![image](https://gyazo.com/740a7c5e4c245ae3c2d5c5f1249be9d4)
+![image](https://gyazo.com/740a7c5e4c245ae3c2d5c5f1249be9d4/raw)
 
 
 
