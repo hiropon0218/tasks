@@ -7,7 +7,7 @@ url: https://tsundoku32509.herokuapp.com/users/sign_in
 - お名前: guest
 - メールアドレス: guest@aaa
 - パスワード: 123abc
-
+![image](https://user-images.githubusercontent.com/74945462/104792155-cedfdb00-57e0-11eb-8c39-5772e58aa8c4.png)
 
 # テーブル設計
 
@@ -41,4 +41,5 @@ url: https://tsundoku32509.herokuapp.com/users/sign_in
 | list             | references | null: false, foreign_key: true |
 
 ### Association
+- belongs_to :user
 - belongs_to :list
