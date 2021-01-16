@@ -9,7 +9,7 @@ url: https://tsundoku32509.herokuapp.com/users/sign_in
 - パスワード: 123abc
 
 ## 使い方
-### 新規ユーザー登録後は自動的に以下の3つのボードが自動生成されます。
+### 新規ユーザー登録後は自動的に以下の3つのボードが生成されます。
 このリストは任意で消したりタイトルの変更も可能です。
 ![image](https://user-images.githubusercontent.com/74945462/104792374-8379fc80-57e1-11eb-8387-ffbbd11c08f4.png)
 
